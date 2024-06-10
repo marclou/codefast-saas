@@ -18,6 +18,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
 			<section className="text-center py-32 px-8 max-w-3xl mx-auto">
 				<h1 className="text-4xl lg:text-5xl font-extrabold mb-6">
 					Collect customer feedback to build better products
