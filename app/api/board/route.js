@@ -70,11 +70,6 @@ export async function DELETE(req) {
 			);
 		}
 
-		await Board.deleteOne({
-			_id: boardId,
-			userId: session?.user?.id,
-		});
-
 		const user = await User.findById(session?.user?.id);
 
 		if (!user.hasAccess) {
@@ -83,6 +78,11 @@ export async function DELETE(req) {
 				{ status: 403 }
 			);
 		}
+
+		await Board.deleteOne({
+			_id: boardId,
+			userId: session?.user?.id,
+		});
 
 		user.boards = user.boards.filter((id) => id.toString() !== boardId);
 		await user.save();

@@ -17,9 +17,7 @@ const ButtonPortal = () => {
 				returnUrl: window.location.href,
 			});
 
-			const portalUrl = response.data.url;
-
-			window.location.href = portalUrl;
+			window.location.href = response.data.url;
 		} catch (error) {
 			const errorMessage =
 				error.response?.data?.error ||
