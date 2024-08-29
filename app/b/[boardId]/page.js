@@ -32,9 +32,9 @@ export default async function PublicFeedbackBoard({ params }) {
 				<h1 className="text-lg font-bold">{board.name}</h1>
 			</section>
 
-			<section className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-start gap-8 pb-12">
+			<section className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row gap-8 pb-12">
 				<FormAddPost boardId={boardId} />
-				<ul className="space-y-4">
+				<ul className="space-y-4 flex-grow">
 					{posts.map((post) => (
 						<CardPost key={post._id} post={post} />
 					))}
