@@ -24,6 +24,10 @@ const postSchema = new mongoose.Schema(
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",
 		},
+		votesCounter: {
+			type: Number,
+			default: 0,
+		},
 	},
 	{
 		timestamps: true,
